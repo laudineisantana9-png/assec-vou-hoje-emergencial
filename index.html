@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0759b6">
+  <meta name="description" content="Formulário de contingência ASSEC para informar ida, volta ou ida e volta.">
+  <title>ASSEC • Vou Hoje? — Emergencial</title>
+  <style>
+:root{--blue:#0759b6;--blue2:#0a76d5;--ink:#102033;--muted:#6b7b8f;--line:#dbe6f2;--bg:#f4f8fc;--card:#fff;--ok:#0a9b62;--warn:#d68000;--radius:22px;--shadow:0 18px 50px rgba(21,55,90,.12)}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(180deg,#eaf4ff 0,#f8fbff 42%,#f4f8fc 100%);color:var(--ink)}body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}button,input,select,textarea{font:inherit}.app-shell{width:min(820px,100%);margin:auto;min-height:100vh;padding:18px}.hero{position:relative;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:18px;border-radius:var(--radius);background:linear-gradient(135deg,#064f9f,#0783d4);color:#fff;box-shadow:var(--shadow)}.brandmark{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;font-weight:900;font-size:28px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25)}.hero h1{font-size:27px;line-height:1;margin:5px 0 7px}.hero p{margin:0;opacity:.85;font-size:13px}.eyebrow{font-size:11px;letter-spacing:.08em;font-weight:800;color:#5c7b9d}.hero .eyebrow{color:#d9efff}.status-pill{white-space:nowrap;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.16);font-size:11px;font-weight:800}.notice{display:flex;gap:12px;align-items:flex-start;margin:16px 0;padding:14px 16px;border-radius:18px;background:#fff8e8;border:1px solid #f6dfaa}.notice-icon{flex:0 0 28px;height:28px;border-radius:10px;display:grid;place-items:center;background:#ffdf8b;font-weight:900}.notice p{margin:4px 0 0;color:#7b6739;font-size:13px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}.stats article{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 8px 30px rgba(23,61,100,.06)}.stats span{display:block;color:var(--muted);font-size:11px;font-weight:700}.stats b{display:block;font-size:24px;margin-top:4px;color:var(--blue)}.late-banner{margin:0 0 16px;padding:13px 15px;border-radius:16px;background:#fff2dd;border:1px solid #ffd194;color:#925700;font-weight:750;font-size:13px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin:16px 0}.card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.card h2{margin:4px 0 18px;font-size:22px}.clock{font-variant-numeric:tabular-nums;font-weight:800;color:var(--blue);background:#edf6ff;padding:7px 10px;border-radius:12px}.field{display:flex;flex-direction:column;gap:7px}.field label,legend{font-size:12px;font-weight:800;color:#30465d}.field small{font-size:11px;color:var(--muted)}input,select,textarea{width:100%;border:1px solid #cfdceb;background:#fbfdff;border-radius:15px;padding:13px 14px;color:var(--ink);outline:none;transition:.2s}input:focus,select:focus,textarea:focus{border-color:#67a9ec;box-shadow:0 0 0 4px rgba(22,115,211,.1)}.full{margin-bottom:14px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}.trip-options{border:0;padding:0;margin:4px 0 16px;display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.trip-options legend{grid-column:1/-1;margin-bottom:2px}.trip-options label{position:relative}.trip-options input{position:absolute;opacity:0;pointer-events:none}.trip-options span{display:grid;place-items:center;min-height:52px;padding:10px;border:1px solid #cfdceb;border-radius:15px;background:#f9fcff;font-weight:800;color:#36546f;cursor:pointer}.trip-options input:checked+span{background:#e8f4ff;border-color:#4f9ce8;color:#0759b6;box-shadow:0 0 0 3px rgba(22,115,211,.09)}.primary{width:100%;border:0;border-radius:16px;padding:15px 18px;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;font-weight:900;cursor:pointer;box-shadow:0 10px 25px rgba(7,89,182,.25)}.primary:disabled{opacity:.55;cursor:not-allowed}.legal{font-size:11px;color:var(--muted);text-align:center;margin:10px 4px 0}.success-card{border-color:#b9ead5;background:linear-gradient(180deg,#f4fff9,#fff)}.success-card h2{color:#08784d}.response-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.response-grid div{padding:12px;border-radius:14px;background:#f3f8fc}.response-grid span{display:block;font-size:10px;text-transform:uppercase;color:var(--muted);font-weight:800}.response-grid b{display:block;margin-top:4px}.live-card{box-shadow:none}.live-line{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-top:1px solid #edf2f7}.pulse-dot{width:10px;height:10px;border-radius:50%;background:#15b974;box-shadow:0 0 0 6px rgba(21,185,116,.12)}footer{text-align:center;color:#7c8da0;font-size:11px;padding:16px}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:20;max-width:min(90vw,520px);padding:12px 15px;border-radius:14px;background:#13263a;color:#fff;box-shadow:0 15px 45px rgba(0,0,0,.2);font-weight:750;font-size:13px}.hidden,.hidden-frame{display:none!important}@media(max-width:620px){.app-shell{padding:10px}.hero{grid-template-columns:auto 1fr;padding:15px}.hero .status-pill{grid-column:1/-1;justify-self:start}.stats{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.trip-options{grid-template-columns:1fr}.card{padding:16px}.response-grid{grid-template-columns:1fr}.hero h1{font-size:24px}}@media(prefers-color-scheme:dark){:root{--ink:#eaf2fb;--muted:#9fb1c4;--line:#25394e;--bg:#0c1520;--card:#111d29}html,body{background:linear-gradient(180deg,#0b1724,#0d141c 45%,#0b1219)}.notice{background:#2b2416;border-color:#57461f}.notice p{color:#d6bf88}.stats article,.card{background:#111d29}.field label,legend{color:#cbd9e8}input,select,textarea{background:#0d1823;border-color:#30475e;color:#eaf2fb}.trip-options span{background:#0d1823;border-color:#30475e;color:#bfd0e0}.trip-options input:checked+span{background:#102d4a}.clock{background:#0e2c49}.response-grid div{background:#0d1823}.success-card{background:#0f201a}.live-line{border-color:#213445}}
+
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div class="brandmark" aria-hidden="true">A</div>
+      <div>
+        <div class="eyebrow">ASSEC • CONTINGÊNCIA</div>
+        <h1 id="title">Vou Hoje?</h1>
+        <p>Use este formulário quando o sistema principal estiver indisponível.</p>
+      </div>
+      <span id="onlineBadge" class="status-pill">conectando…</span>
+    </header>
+
+    <main>
+      <section class="notice">
+        <div class="notice-icon">!</div>
+        <div>
+          <strong>Uma resposta por associado por dia.</strong>
+          <p>O telefone identifica sua resposta. O horário oficial é registrado no Google, não no seu celular.</p>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Resumo das respostas">
+        <article><span>Total</span><b id="stTotal">0</b></article>
+        <article><span>Ida</span><b id="stIda">0</b></article>
+        <article><span>Volta</span><b id="stVolta">0</b></article>
+        <article><span>Ida e volta</span><b id="stAmbos">0</b></article>
+      </section>
+
+      <section id="lateBanner" class="late-banner hidden">
+        O horário oficial já passou das 15h. Sua resposta será registrada como após o limite.
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <div>
+            <span class="eyebrow">RESPOSTA DO DIA</span>
+            <h2>Informe seu transporte</h2>
+          </div>
+          <span id="serverClock" class="clock">--:--</span>
+        </div>
+
+        <form id="form" method="post" target="submitFrame" autocomplete="on">
+          <input type="hidden" name="action" value="submit">
+          <input type="hidden" name="origem" value="github_emergencial">
+
+          <div class="field full">
+            <label for="nome">Nome completo</label>
+            <input id="nome" name="nome" maxlength="120" required placeholder="Seu nome completo">
+          </div>
+
+          <div class="field full">
+            <label for="telefone">Telefone / WhatsApp</label>
+            <input id="telefone" name="telefone" inputmode="tel" autocomplete="tel" maxlength="20" required placeholder="(74) 99999-9999">
+            <small>Esse número impede uma segunda resposta no mesmo dia.</small>
+          </div>
+
+          <fieldset class="trip-options">
+            <legend>Como você vai hoje?</legend>
+            <label><input type="radio" name="viagem" value="ida" required><span>Ida</span></label>
+            <label><input type="radio" name="viagem" value="volta"><span>Volta</span></label>
+            <label><input type="radio" name="viagem" value="ida_volta"><span>Ida e volta</span></label>
+          </fieldset>
+
+          <div class="grid2">
+            <div class="field">
+              <label for="cidade">Cidade</label>
+              <select id="cidade" name="cidade" required>
+                <option value="">Selecione</option>
+                <option value="juazeiro">Juazeiro - BA</option>
+                <option value="petrolina">Petrolina - PE</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="embarque">Ponto de embarque</label>
+              <select id="embarque" name="embarque" required>
+                <option value="">Selecione</option>
+                <option value="assec">ASSEC</option>
+                <option value="atakarejo">Atakarejo</option>
+                <option value="barra_grande">Barra Grande</option>
+                <option value="batalhao">Batalhão</option>
+                <option value="populares">Populares</option>
+                <option value="praca_omara">Praça / Omara</option>
+                <option value="rodoviaria">Rodoviária</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field full">
+            <label for="instituicao">Instituição / local de estudo</label>
+            <input id="instituicao" name="instituicao" maxlength="120" placeholder="Ex.: UNEB, UNIVASF, faculdade...">
+          </div>
+
+          <div class="grid2">
+            <div class="field">
+              <label for="tem_prova">Tem prova hoje?</label>
+              <select id="tem_prova" name="tem_prova">
+                <option value="nao">Não</option>
+                <option value="sim">Sim</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="horario_prova">Horário da prova</label>
+              <select id="horario_prova" name="horario_prova" disabled>
+                <option value="">Não se aplica</option>
+                <option value="primeiro">1º horário</option>
+                <option value="segundo">2º horário</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field full">
+            <label for="observacao">Observação</label>
+            <textarea id="observacao" name="observacao" maxlength="300" rows="3" placeholder="Opcional"></textarea>
+          </div>
+
+          <button id="submitBtn" class="primary" type="submit">Registrar minha resposta</button>
+          <p class="legal">Ao enviar, sua resposta recebe data e hora oficiais e não poderá ser enviada novamente no mesmo dia.</p>
+        </form>
+        <iframe id="submitFrame" name="submitFrame" title="Envio" class="hidden-frame"></iframe>
+      </section>
+
+      <section id="myResponse" class="card success-card hidden" aria-live="polite">
+        <span class="eyebrow">REGISTRADO</span>
+        <h2>Sua resposta está salva</h2>
+        <div id="myResponseBody"></div>
+      </section>
+
+      <section class="card live-card">
+        <div class="card-head">
+          <div>
+            <span class="eyebrow">ATUALIZAÇÃO AUTOMÁTICA</span>
+            <h2>Situação de hoje</h2>
+          </div>
+          <span class="pulse-dot" title="Atualiza automaticamente"></span>
+        </div>
+        <div class="live-line"><span>Respostas após 15h</span><strong id="stLate">0</strong></div>
+        <div class="live-line"><span>Última atualização</span><strong id="lastUpdate">—</strong></div>
+      </section>
+    </main>
+
+    <footer>ASSEC • Formulário emergencial independente do servidor principal</footer>
+  </div>
+
+  <div id="toast" class="toast hidden" role="status"></div>
+  <script>
+window.ASSEC_EMERGENCY = {
+  // Após implantar o Apps Script, cole aqui a URL que termina em /exec.
+  API_URL: 'https://script.google.com/macros/s/AKfycbwnoi6RIltfw67x_yHLabGzW0ua-83sWnCo6dHqrX1DyxETklX1m8iuLdDOHN-VLWYE/exec',
+  REFRESH_SECONDS: 15,
+  FORM_TITLE: 'ASSEC • Vou Hoje? — Emergencial'
+};
+
+  </script>
+  <script>
+(() => {
+  'use strict';
+  const cfg = window.ASSEC_EMERGENCY || {};
+  const API = String(cfg.API_URL || '').trim();
+  const REFRESH = Math.max(10, Number(cfg.REFRESH_SECONDS || 15));
+  const $ = (s) => document.querySelector(s);
+  const form = $('#form');
+  const phone = $('#telefone');
+  const submitBtn = $('#submitBtn');
+  let submitted = false;
+  let currentServerDate = '';
+
+  const configured = /^https:\/\/script\.google\.com\/.+\/exec(?:\?.*)?$/i.test(API);
+  const toast = (msg) => {
+    const el = $('#toast'); el.textContent = msg; el.classList.remove('hidden');
+    clearTimeout(window.__toastTimer); window.__toastTimer = setTimeout(() => el.classList.add('hidden'), 4200);
+  };
+  const digits = (v) => String(v || '').replace(/\D+/g, '');
+  const labelTrip = (v) => ({ida:'Ida',volta:'Volta',ida_volta:'Ida e volta'}[v] || v || '—');
+  const labelCity = (v) => ({juazeiro:'Juazeiro - BA',petrolina:'Petrolina - PE'}[v] || v || '—');
+
+  function jsonp(params) {
+    return new Promise((resolve, reject) => {
+      if (!configured) return reject(new Error('API não configurada'));
+      const cb = '__assec_cb_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+      const script = document.createElement('script');
+      const url = new URL(API);
+      Object.entries(params || {}).forEach(([k,v]) => url.searchParams.set(k, v));
+      url.searchParams.set('callback', cb);
+      let timer;
+      window[cb] = (data) => { clearTimeout(timer); cleanup(); resolve(data); };
+      const cleanup = () => { try{delete window[cb]}catch{}; script.remove(); };
+      script.onerror = () => { clearTimeout(timer); cleanup(); reject(new Error('Falha de conexão')); };
+      timer = setTimeout(() => { cleanup(); reject(new Error('Tempo esgotado')); }, 12000);
+      script.src = url.toString();
+      document.head.appendChild(script);
+    });
+  }
+
+  function applyStatus(d) {
+    if (!d || !d.ok) return;
+    currentServerDate = d.data_operacional || '';
+    $('#stTotal').textContent = d.total ?? 0;
+    $('#stIda').textContent = d.ida ?? 0;
+    $('#stVolta').textContent = d.volta ?? 0;
+    $('#stAmbos').textContent = d.ida_volta ?? 0;
+    $('#stLate').textContent = d.apos_15h ?? 0;
+    $('#serverClock').textContent = d.hora || '--:--';
+    $('#lastUpdate').textContent = d.hora || '—';
+    $('#onlineBadge').textContent = d.form_aberto ? 'online • recebendo' : 'temporariamente fechado';
+    $('#onlineBadge').style.opacity = d.form_aberto ? '1' : '.7';
+    $('#lateBanner').classList.toggle('hidden', !d.limite_passou);
+    if (!d.form_aberto) { submitBtn.disabled = true; submitBtn.textContent = 'Formulário fechado'; }
+    else if (!submitted && !$('#myResponse').classList.contains('hidden')) { submitBtn.disabled = true; }
+    else if (!submitted) { submitBtn.disabled = false; submitBtn.textContent = 'Registrar minha resposta'; }
+  }
+
+  async function refreshStatus() {
+    if (!configured) { $('#onlineBadge').textContent = 'falta configurar API'; return; }
+    try { applyStatus(await jsonp({action:'status'})); }
+    catch { $('#onlineBadge').textContent = 'sem conexão'; }
+  }
+
+  function showMine(d) {
+    if (!d || !d.encontrada) return false;
+    $('#myResponseBody').innerHTML = `
+      <div class="response-grid">
+        <div><span>Viagem</span><b>${labelTrip(d.viagem)}</b></div>
+        <div><span>Posição</span><b>#${d.ordem || '—'}</b></div>
+        <div><span>Registrado às</span><b>${d.hora || '—'}</b></div>
+        <div><span>Cidade</span><b>${labelCity(d.cidade)}</b></div>
+        <div><span>Situação</span><b>${d.apos_15h ? 'Após 15h' : 'No prazo'}</b></div>
+        <div><span>Data</span><b>${d.data_br || d.data_operacional || '—'}</b></div>
+      </div>`;
+    $('#myResponse').classList.remove('hidden');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Resposta já registrada hoje';
+    form.querySelectorAll('input,select,textarea').forEach(el => { if (el.type !== 'hidden') el.disabled = true; });
+    return true;
+  }
+
+  async function checkMine(rawPhone, announce=false) {
+    const tel = digits(rawPhone);
+    if (tel.length < 10 || !configured) return false;
+    try {
+      const d = await jsonp({action:'me', telefone:tel});
+      if (showMine(d)) {
+        localStorage.setItem('assec_emergency_phone', tel);
+        if (announce) toast(d.duplicada ? 'Você já tinha uma resposta registrada hoje.' : 'Resposta registrada com sucesso.');
+        return true;
+      }
+    } catch {}
+    return false;
+  }
+
+  $('#tem_prova').addEventListener('change', (e) => {
+    const yes = e.target.value === 'sim';
+    $('#horario_prova').disabled = !yes;
+    if (!yes) $('#horario_prova').value = '';
+  });
+
+  phone.addEventListener('blur', () => checkMine(phone.value, false));
+
+  form.addEventListener('submit', async (e) => {
+    if (!configured) { e.preventDefault(); toast('Ainda falta publicar o backend do Google Apps Script.'); return; }
+    const tel = digits(phone.value);
+    if (tel.length < 10) { e.preventDefault(); toast('Informe um telefone válido com DDD.'); phone.focus(); return; }
+    if (await checkMine(tel, true)) { e.preventDefault(); return; }
+    submitted = true;
+    form.action = API;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Registrando…';
+    localStorage.setItem('assec_emergency_phone', tel);
+    setTimeout(async () => {
+      const ok = await checkMine(tel, true);
+      submitted = false;
+      if (!ok) { submitBtn.disabled = false; submitBtn.textContent = 'Registrar minha resposta'; toast('Ainda não consegui confirmar. Verifique a conexão e tente novamente.'); }
+      refreshStatus();
+    }, 1500);
+  });
+
+  const saved = localStorage.getItem('assec_emergency_phone');
+  if (saved) phone.value = saved;
+  refreshStatus().then(() => { if (saved) checkMine(saved, false); });
+  setInterval(() => { if (!document.hidden) refreshStatus(); }, REFRESH * 1000);
+
+  // Versão de contingência em arquivo único: sem Service Worker.
+})();
+
+  </script>
+</body>
+</html>
