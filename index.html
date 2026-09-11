@@ -1,162 +1,280 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#0759b6">
-  <meta name="description" content="Formulário de contingência ASSEC para informar ida, volta ou ida e volta.">
-  <title>ASSEC • Vou Hoje? — Emergencial</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#0759b6" name="theme-color"/>
+<meta content="Formulário de contingência ASSEC para informar ida, volta ou ida e volta." name="description"/>
+<title>ASSEC • Vou Hoje? — Emergencial</title>
+<style>
 :root{--blue:#0759b6;--blue2:#0a76d5;--ink:#102033;--muted:#6b7b8f;--line:#dbe6f2;--bg:#f4f8fc;--card:#fff;--ok:#0a9b62;--warn:#d68000;--radius:22px;--shadow:0 18px 50px rgba(21,55,90,.12)}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(180deg,#eaf4ff 0,#f8fbff 42%,#f4f8fc 100%);color:var(--ink)}body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}button,input,select,textarea{font:inherit}.app-shell{width:min(820px,100%);margin:auto;min-height:100vh;padding:18px}.hero{position:relative;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:18px;border-radius:var(--radius);background:linear-gradient(135deg,#064f9f,#0783d4);color:#fff;box-shadow:var(--shadow)}.brandmark{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;font-weight:900;font-size:28px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25)}.hero h1{font-size:27px;line-height:1;margin:5px 0 7px}.hero p{margin:0;opacity:.85;font-size:13px}.eyebrow{font-size:11px;letter-spacing:.08em;font-weight:800;color:#5c7b9d}.hero .eyebrow{color:#d9efff}.status-pill{white-space:nowrap;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.16);font-size:11px;font-weight:800}.notice{display:flex;gap:12px;align-items:flex-start;margin:16px 0;padding:14px 16px;border-radius:18px;background:#fff8e8;border:1px solid #f6dfaa}.notice-icon{flex:0 0 28px;height:28px;border-radius:10px;display:grid;place-items:center;background:#ffdf8b;font-weight:900}.notice p{margin:4px 0 0;color:#7b6739;font-size:13px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}.stats article{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 8px 30px rgba(23,61,100,.06)}.stats span{display:block;color:var(--muted);font-size:11px;font-weight:700}.stats b{display:block;font-size:24px;margin-top:4px;color:var(--blue)}.late-banner{margin:0 0 16px;padding:13px 15px;border-radius:16px;background:#fff2dd;border:1px solid #ffd194;color:#925700;font-weight:750;font-size:13px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin:16px 0}.card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.card h2{margin:4px 0 18px;font-size:22px}.clock{font-variant-numeric:tabular-nums;font-weight:800;color:var(--blue);background:#edf6ff;padding:7px 10px;border-radius:12px}.field{display:flex;flex-direction:column;gap:7px}.field label,legend{font-size:12px;font-weight:800;color:#30465d}.field small{font-size:11px;color:var(--muted)}input,select,textarea{width:100%;border:1px solid #cfdceb;background:#fbfdff;border-radius:15px;padding:13px 14px;color:var(--ink);outline:none;transition:.2s}input:focus,select:focus,textarea:focus{border-color:#67a9ec;box-shadow:0 0 0 4px rgba(22,115,211,.1)}.full{margin-bottom:14px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}.trip-options{border:0;padding:0;margin:4px 0 16px;display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.trip-options legend{grid-column:1/-1;margin-bottom:2px}.trip-options label{position:relative}.trip-options input{position:absolute;opacity:0;pointer-events:none}.trip-options span{display:grid;place-items:center;min-height:52px;padding:10px;border:1px solid #cfdceb;border-radius:15px;background:#f9fcff;font-weight:800;color:#36546f;cursor:pointer}.trip-options input:checked+span{background:#e8f4ff;border-color:#4f9ce8;color:#0759b6;box-shadow:0 0 0 3px rgba(22,115,211,.09)}.primary{width:100%;border:0;border-radius:16px;padding:15px 18px;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;font-weight:900;cursor:pointer;box-shadow:0 10px 25px rgba(7,89,182,.25)}.primary:disabled{opacity:.55;cursor:not-allowed}.legal{font-size:11px;color:var(--muted);text-align:center;margin:10px 4px 0}.success-card{border-color:#b9ead5;background:linear-gradient(180deg,#f4fff9,#fff)}.success-card h2{color:#08784d}.response-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.response-grid div{padding:12px;border-radius:14px;background:#f3f8fc}.response-grid span{display:block;font-size:10px;text-transform:uppercase;color:var(--muted);font-weight:800}.response-grid b{display:block;margin-top:4px}.live-card{box-shadow:none}.live-line{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-top:1px solid #edf2f7}.pulse-dot{width:10px;height:10px;border-radius:50%;background:#15b974;box-shadow:0 0 0 6px rgba(21,185,116,.12)}footer{text-align:center;color:#7c8da0;font-size:11px;padding:16px}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:20;max-width:min(90vw,520px);padding:12px 15px;border-radius:14px;background:#13263a;color:#fff;box-shadow:0 15px 45px rgba(0,0,0,.2);font-weight:750;font-size:13px}.hidden,.hidden-frame{display:none!important}@media(max-width:620px){.app-shell{padding:10px}.hero{grid-template-columns:auto 1fr;padding:15px}.hero .status-pill{grid-column:1/-1;justify-self:start}.stats{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.trip-options{grid-template-columns:1fr}.card{padding:16px}.response-grid{grid-template-columns:1fr}.hero h1{font-size:24px}}@media(prefers-color-scheme:dark){:root{--ink:#eaf2fb;--muted:#9fb1c4;--line:#25394e;--bg:#0c1520;--card:#111d29}html,body{background:linear-gradient(180deg,#0b1724,#0d141c 45%,#0b1219)}.notice{background:#2b2416;border-color:#57461f}.notice p{color:#d6bf88}.stats article,.card{background:#111d29}.field label,legend{color:#cbd9e8}input,select,textarea{background:#0d1823;border-color:#30475e;color:#eaf2fb}.trip-options span{background:#0d1823;border-color:#30475e;color:#bfd0e0}.trip-options input:checked+span{background:#102d4a}.clock{background:#0e2c49}.response-grid div{background:#0d1823}.success-card{background:#0f201a}.live-line{border-color:#213445}}
 
-  </style>
+  
+/* ===== VOU HOJE EMERGENCIAL • UI INTELIGENTE ===== */
+.identity-panel{position:relative;margin:2px 0 18px;padding:16px;border:1px solid #cfe1f4;border-radius:20px;background:linear-gradient(180deg,#f8fcff,#f2f8ff);box-shadow:inset 0 1px 0 rgba(255,255,255,.9)}
+.identity-head{display:grid;grid-template-columns:42px 1fr;gap:11px;align-items:center;margin-bottom:14px}
+.identity-head strong{display:block;font-size:15px;margin:2px 0 3px;color:#163552}
+.identity-head small{display:block;color:var(--muted);font-size:11px;line-height:1.45}
+.identity-icon{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#0759b6,#0b8bd8);color:#fff;font-weight:900;box-shadow:0 8px 20px rgba(7,89,182,.2)}
+.autocomplete-field{position:relative}
+.input-shell{position:relative}
+.input-shell input{padding-left:44px}
+.input-symbol{position:absolute;left:14px;top:50%;transform:translateY(-50%);z-index:1;opacity:.6;font-size:15px}
+.suggestions{position:absolute;z-index:45;left:0;right:0;top:calc(100% - 2px);max-height:310px;overflow:auto;border:1px solid #c9dcee;border-radius:16px;background:#fff;box-shadow:0 18px 45px rgba(18,55,91,.18);padding:7px}
+.suggestion-item{width:100%;border:0;background:transparent;text-align:left;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:11px 12px;border-radius:12px;cursor:pointer;color:var(--ink)}
+.suggestion-item:hover,.suggestion-item:focus{background:#eef7ff;outline:none}
+.suggestion-item strong{display:block;font-size:13px}
+.suggestion-item small{display:block;margin-top:3px;color:var(--muted);font-size:11px}
+.suggestion-item .tag{font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.04em;padding:5px 7px;border-radius:999px;background:#e9f6ef;color:#08784d}
+.suggestion-item.blocked{background:#fff4f4;color:#8d2525;cursor:not-allowed}
+.suggestion-item.blocked .tag{background:#ffe0e0;color:#a21f1f}
+.suggestion-empty{padding:13px;border-radius:12px;background:#f5f9fd;color:#567087;font-size:12px;line-height:1.45}
+.member-state{display:flex;align-items:center;gap:8px;border-radius:13px;padding:10px 12px;margin-top:3px;font-size:11px;font-weight:700}
+.member-state.neutral{background:#eef5fb;color:#587188}.member-state.ok{background:#eafaf2;color:#08784d}.member-state.new{background:#fff7e6;color:#875c0a}.member-state.blocked{background:#fff0f0;color:#a21f1f}
+.member-dot{width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 0 4px color-mix(in srgb,currentColor 12%,transparent)}
+.blocked-alert{margin:-4px 0 16px;padding:14px 15px;border-radius:16px;background:#fff1f1;border:1px solid #ffc4c4;color:#9c2626;display:flex;flex-direction:column;gap:3px}
+.blocked-alert strong{font-size:13px}.blocked-alert span{font-size:11px;line-height:1.4}
+select[data-smart]{position:absolute!important;opacity:0!important;width:1px!important;height:1px!important;pointer-events:none!important;left:-9999px!important}
+.smart-select-trigger{width:100%;min-height:48px;border:1px solid #cfdceb;background:#fbfdff;border-radius:15px;padding:11px 13px;display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;color:var(--ink);cursor:pointer}
+.smart-select-trigger:hover,.smart-select-trigger:focus{border-color:#67a9ec;box-shadow:0 0 0 4px rgba(22,115,211,.1);outline:none}
+.smart-select-trigger .placeholder{color:#7d8fa2}.smart-select-trigger .chev{font-size:16px;color:#6f88a0}.smart-select-trigger:disabled{opacity:.5;cursor:not-allowed}
+.select-overlay{position:fixed;inset:0;z-index:120;background:rgba(7,24,42,.48);backdrop-filter:blur(6px);display:grid;place-items:center;padding:18px}
+.select-sheet{width:min(520px,100%);max-height:min(680px,88vh);display:flex;flex-direction:column;background:#fff;border:1px solid #d8e5f1;border-radius:24px;box-shadow:0 28px 80px rgba(7,33,61,.28);overflow:hidden}
+.select-sheet-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;padding:18px 18px 10px}
+.select-sheet-head h3{font-size:19px;margin:3px 0 0}
+.icon-btn{width:38px;height:38px;border:0;border-radius:13px;background:#edf4fb;color:#45627d;font-size:22px;cursor:pointer}
+.select-search-wrap{margin:4px 18px 12px;position:relative}
+.select-search-wrap span{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:20px;color:#7890a7}
+.select-search-wrap input{padding-left:43px;background:#f6faff}
+.select-options{overflow:auto;padding:0 12px 14px}
+.select-option{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;border:0;background:transparent;padding:12px 13px;border-radius:13px;text-align:left;cursor:pointer;color:var(--ink)}
+.select-option:hover,.select-option:focus{background:#eef7ff;outline:none}.select-option.active{background:#e7f3ff;color:#0759b6;font-weight:850}
+.select-no-result{padding:18px;text-align:center;color:var(--muted);font-size:12px}
+.hero{overflow:hidden}.hero:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-70px;top:-105px;background:rgba(255,255,255,.09);pointer-events:none}
+.brandmark{position:relative;z-index:1;font-size:18px;letter-spacing:-.04em}
+.card{border-color:#d7e5f2}.primary{transition:transform .16s ease,filter .16s ease}.primary:not(:disabled):active{transform:translateY(1px)}
+@media(max-width:620px){.identity-panel{padding:14px}.select-overlay{align-items:end;padding:0}.select-sheet{width:100%;max-height:84vh;border-radius:24px 24px 0 0;padding-bottom:env(safe-area-inset-bottom)}.suggestions{position:fixed;left:12px;right:12px;top:auto;bottom:12px;max-height:52vh;border-radius:20px;z-index:100}.identity-head{grid-template-columns:38px 1fr}.identity-icon{width:38px;height:38px;border-radius:13px}}
+@media(prefers-color-scheme:dark){.identity-panel{background:linear-gradient(180deg,#101d29,#0d1823);border-color:#294158}.identity-head strong{color:#eaf2fb}.suggestions,.select-sheet{background:#101b27;border-color:#30475e}.suggestion-item{color:#eaf2fb}.suggestion-item:hover,.suggestion-item:focus,.select-option:hover,.select-option:focus{background:#14283a}.smart-select-trigger{background:#0d1823;border-color:#30475e;color:#eaf2fb}.select-option{color:#eaf2fb}.select-search-wrap input{background:#0d1823}.icon-btn{background:#162738;color:#d8e6f3}}
+</style>
 </head>
 <body>
-  <div class="app-shell">
-    <header class="hero">
-      <div class="brandmark" aria-hidden="true">A</div>
-      <div>
-        <div class="eyebrow">ASSEC • CONTINGÊNCIA</div>
-        <h1 id="title">Vou Hoje?</h1>
-        <p>Use este formulário quando o sistema principal estiver indisponível.</p>
-      </div>
-      <span id="onlineBadge" class="status-pill">conectando…</span>
-    </header>
-
-    <main>
-      <section class="notice">
-        <div class="notice-icon">!</div>
-        <div>
-          <strong>Uma resposta por associado por dia.</strong>
-          <p>O telefone identifica sua resposta. O horário oficial é registrado no Google, não no seu celular.</p>
-        </div>
-      </section>
-
-      <section class="stats" aria-label="Resumo das respostas">
-        <article><span>Total</span><b id="stTotal">0</b></article>
-        <article><span>Ida</span><b id="stIda">0</b></article>
-        <article><span>Volta</span><b id="stVolta">0</b></article>
-        <article><span>Ida e volta</span><b id="stAmbos">0</b></article>
-      </section>
-
-      <section id="lateBanner" class="late-banner hidden">
+<div class="app-shell">
+<header class="hero">
+<div aria-hidden="true" class="brandmark">AS</div>
+<div>
+<div class="eyebrow">ASSEC • CONTINGÊNCIA</div>
+<h1 id="title">Vou Hoje?</h1>
+<p>Use este formulário quando o sistema principal estiver indisponível.</p>
+</div>
+<span class="status-pill" id="onlineBadge">conectando…</span>
+</header>
+<main>
+<section class="notice">
+<div class="notice-icon">!</div>
+<div>
+<strong>Uma resposta por associado por dia.</strong>
+<p>O telefone identifica sua resposta. O horário oficial é registrado no Google, não no seu celular.</p>
+</div>
+</section>
+<section aria-label="Resumo das respostas" class="stats">
+<article><span>Total</span><b id="stTotal">0</b></article>
+<article><span>Ida</span><b id="stIda">0</b></article>
+<article><span>Volta</span><b id="stVolta">0</b></article>
+<article><span>Ida e volta</span><b id="stAmbos">0</b></article>
+</section>
+<section class="late-banner hidden" id="lateBanner">
         O horário oficial já passou das 15h. Sua resposta será registrada como após o limite.
       </section>
+<section class="card">
+<div class="card-head">
+<div>
+<span class="eyebrow">RESPOSTA DO DIA</span>
+<h2>Informe seu transporte</h2>
+</div>
+<span class="clock" id="serverClock">--:--</span>
+</div>
+<form autocomplete="on" id="form" method="post" target="submitFrame">
+<input name="action" type="hidden" value="submit"/>
+<input name="origem" type="hidden" value="github_emergencial"/>
 
-      <section class="card">
-        <div class="card-head">
-          <div>
-            <span class="eyebrow">RESPOSTA DO DIA</span>
-            <h2>Informe seu transporte</h2>
-          </div>
-          <span id="serverClock" class="clock">--:--</span>
-        </div>
+<div class="identity-panel">
+<div class="identity-head">
+<div aria-hidden="true" class="identity-icon">✓</div>
+<div>
+<span class="eyebrow">IDENTIFICAÇÃO INTELIGENTE</span>
+<strong>Encontre seu cadastro ASSEC</strong>
+<small>Comece digitando o nome ou o telefone. Se já estiver cadastrado, toque no resultado e os dois campos serão preenchidos.</small>
+</div>
+</div>
+<input id="socioRef" name="socio_ref" type="hidden" value=""/>
+<div class="field full autocomplete-field">
+<label for="nome">Nome completo</label>
+<div class="input-shell"><span aria-hidden="true" class="input-symbol">👤</span><input autocomplete="off" id="nome" maxlength="120" name="nome" placeholder="Digite seu nome para pesquisar" required=""/></div>
+<div class="suggestions hidden" id="nomeSuggestions" role="listbox"></div>
+<small>Digite pelo menos 2 letras. Se não aparecer, continue normalmente como novo associado.</small>
+</div>
+<div class="field full autocomplete-field">
+<label for="telefone">Telefone / WhatsApp</label>
+<div class="input-shell"><span aria-hidden="true" class="input-symbol">☎</span><input autocomplete="tel" id="telefone" inputmode="tel" maxlength="16" name="telefone" placeholder="(74) 99999-9999" required=""/></div>
+<div class="suggestions hidden" id="telefoneSuggestions" role="listbox"></div>
+<small>Ao selecionar um cadastro existente, nome e telefone são preenchidos automaticamente.</small>
+</div>
+<div class="member-state neutral" id="memberState">
+<span class="member-dot"></span>
+<span>Você pode pesquisar um cadastro existente ou informar um novo.</span>
+</div>
+</div>
+<div class="blocked-alert hidden" id="blockedAlert" role="alert">
+<strong>Cadastro não localizado</strong>
+<span>Você não se encontra no cadastro atual da ASSEC porque sua rematrícula não foi concluída ou renovada. Faça seu recadastro/rematrícula no escritório da ASSEC para regularizar seu acesso.</span>
+</div>
 
-        <form id="form" method="post" target="submitFrame" autocomplete="on">
-          <input type="hidden" name="action" value="submit">
-          <input type="hidden" name="origem" value="github_emergencial">
 
-          <div class="field full">
-            <label for="nome">Nome completo</label>
-            <input id="nome" name="nome" maxlength="120" required placeholder="Seu nome completo">
-          </div>
+<fieldset class="trip-options">
+<legend>Como você vai hoje?</legend>
+<label><input name="viagem" required="" type="radio" value="ida"/><span>Ida</span></label>
+<label><input name="viagem" type="radio" value="volta"/><span>Volta</span></label>
+<label><input name="viagem" type="radio" value="ida_volta"/><span>Ida e volta</span></label>
+</fieldset>
+<div class="grid2">
+<div class="field">
+<label for="cidade">Cidade</label>
+<select data-smart="1" id="cidade" name="cidade" required="">
+<option value="">Selecione</option>
+<option value="juazeiro">Juazeiro - BA</option>
+<option value="petrolina">Petrolina - PE</option>
+</select>
+</div>
+<div class="field">
+<label for="embarque">Ponto de embarque</label>
+<select data-smart="1" id="embarque" name="embarque" required="">
+<option value="">Selecione</option>
+<option value="assec">ASSEC</option>
+<option value="atakarejo">Atakarejo</option>
+<option value="barra_grande">Barra Grande</option>
+<option value="batalhao">Batalhão</option>
+<option value="populares">Populares</option>
+<option value="praca_omara">Praça / Omara</option>
+<option value="rodoviaria">Rodoviária</option>
+<option value="outro">Outro</option>
+</select>
+</div>
+</div>
+<div class="field full">
+<label for="instituicaoSelect">Instituição / local de estudo</label>
+<select data-smart="1" id="instituicaoSelect" name="instituicao_select" required="">
+<option value="">Selecione sua instituição</option>
+<option value="ACADEMIA DE ESTUDOS">ACADEMIA DE ESTUDOS</option>
+<option value="ACELERA CURSOS">ACELERA CURSOS</option>
+<option value="ANHANGUERA-PE">ANHANGUERA-PE</option>
+<option value="ANHANGUERA">ANHANGUERA</option>
+<option value="BIOS - JUAZEIRO">BIOS - JUAZEIRO</option>
+<option value="BIOS - PETROLINA">BIOS - PETROLINA</option>
+<option value="CEBRAC">CEBRAC</option>
+<option value="CEFAP">CEFAP</option>
+<option value="CEVASF">CEVASF</option>
+<option value="ESTÁCIO JUAZEIRO">ESTÁCIO JUAZEIRO</option>
+<option value="FESN">FESN</option>
+<option value="FESN PETROLINA">FESN PETROLINA</option>
+<option value="FTC - JUAZEIRO">FTC - JUAZEIRO</option>
+<option value="FTC - PETROLINA">FTC - PETROLINA</option>
+<option value="FACAPE">FACAPE</option>
+<option value="FAESPE">FAESPE</option>
+<option value="FACESP">FACESP</option>
+<option value="GRAU">GRAU</option>
+<option value="IF">IF</option>
+<option value="INST EMBELEZE JUA">INST EMBELEZE JUA</option>
+<option value="INST EMBELEZE PE">INST EMBELEZE PE</option>
+<option value="SEDUCE PETROLINA">SEDUCE PETROLINA</option>
+<option value="SOBERANA">SOBERANA</option>
+<option value="TOP DE LINHA-JUA">TOP DE LINHA-JUA</option>
+<option value="TOP DE LINHA-PE">TOP DE LINHA-PE</option>
+<option value="UNIP">UNIP</option>
+<option value="UNICESUMAR -PE">UNICESUMAR -PE</option>
+<option value="UNEB">UNEB</option>
+<option value="UNIBRAS">UNIBRAS</option>
+<option value="UNINTER">UNINTER</option>
+<option value="UNINASSAU">UNINASSAU</option>
+<option value="UNIVASF-JUA">UNIVASF-JUA</option>
+<option value="UNIVASF-PE">UNIVASF-PE</option>
+<option value="UNOPAR">UNOPAR</option>
+<option value="UPE">UPE</option>
+<option value="VIA CERTA">VIA CERTA</option>
+<option value="OUTRO">OUTRO</option>
+</select>
+<input id="instituicao" name="instituicao" type="hidden" value=""/>
+</div>
+<div class="field full hidden" id="outraInstituicaoWrap">
+<label for="outraInstituicao">Qual é a instituição?</label>
+<input id="outraInstituicao" maxlength="120" placeholder="Digite o nome da instituição"/>
+</div>
+<div class="grid2">
+<div class="field">
+<label for="tem_prova">Tem prova hoje?</label>
+<select data-smart="1" id="tem_prova" name="tem_prova">
+<option value="nao">Não</option>
+<option value="sim">Sim</option>
+</select>
+</div>
+<div class="field">
+<label for="horario_prova">Horário da prova</label>
+<select data-smart="1" disabled="" id="horario_prova" name="horario_prova">
+<option value="">Não se aplica</option>
+<option value="primeiro">1º horário</option>
+<option value="segundo">2º horário</option>
+</select>
+</div>
+</div>
+<div class="field full">
+<label for="observacao">Observação</label>
+<textarea id="observacao" maxlength="300" name="observacao" placeholder="Opcional" rows="3"></textarea>
+</div>
+<button class="primary" id="submitBtn" type="submit">Registrar minha resposta</button>
+<p class="legal">Ao enviar, sua resposta recebe data e hora oficiais e não poderá ser enviada novamente no mesmo dia.</p>
+</form>
+<iframe class="hidden-frame" id="submitFrame" name="submitFrame" title="Envio"></iframe>
+</section>
+<section aria-live="polite" class="card success-card hidden" id="myResponse">
+<span class="eyebrow">REGISTRADO</span>
+<h2>Sua resposta está salva</h2>
+<div id="myResponseBody"></div>
+</section>
+<section class="card live-card">
+<div class="card-head">
+<div>
+<span class="eyebrow">ATUALIZAÇÃO AUTOMÁTICA</span>
+<h2>Situação de hoje</h2>
+</div>
+<span class="pulse-dot" title="Atualiza automaticamente"></span>
+</div>
+<div class="live-line"><span>Respostas após 15h</span><strong id="stLate">0</strong></div>
+<div class="live-line"><span>Última atualização</span><strong id="lastUpdate">—</strong></div>
+</section>
+</main>
+<footer>ASSEC • Formulário emergencial independente do servidor principal</footer>
+</div>
 
-          <div class="field full">
-            <label for="telefone">Telefone / WhatsApp</label>
-            <input id="telefone" name="telefone" inputmode="tel" autocomplete="tel" maxlength="20" required placeholder="(74) 99999-9999">
-            <small>Esse número impede uma segunda resposta no mesmo dia.</small>
-          </div>
+<div aria-hidden="true" class="select-overlay hidden" id="smartSelectModal">
+<div aria-labelledby="smartSelectTitle" aria-modal="true" class="select-sheet" role="dialog">
+<div class="select-sheet-head">
+<div>
+<span class="eyebrow">SELEÇÃO RÁPIDA</span>
+<h3 id="smartSelectTitle">Escolha uma opção</h3>
+</div>
+<button aria-label="Fechar" class="icon-btn" id="smartSelectClose" type="button">×</button>
+</div>
+<div class="select-search-wrap">
+<span aria-hidden="true">⌕</span>
+<input autocomplete="off" id="smartSelectSearch" placeholder="Pesquisar nesta lista" type="search"/>
+</div>
+<div class="select-options" id="smartSelectOptions"></div>
+</div>
+</div>
+<div class="toast hidden" id="toast" role="status"></div>
+<script>
 
-          <fieldset class="trip-options">
-            <legend>Como você vai hoje?</legend>
-            <label><input type="radio" name="viagem" value="ida" required><span>Ida</span></label>
-            <label><input type="radio" name="viagem" value="volta"><span>Volta</span></label>
-            <label><input type="radio" name="viagem" value="ida_volta"><span>Ida e volta</span></label>
-          </fieldset>
-
-          <div class="grid2">
-            <div class="field">
-              <label for="cidade">Cidade</label>
-              <select id="cidade" name="cidade" required>
-                <option value="">Selecione</option>
-                <option value="juazeiro">Juazeiro - BA</option>
-                <option value="petrolina">Petrolina - PE</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="embarque">Ponto de embarque</label>
-              <select id="embarque" name="embarque" required>
-                <option value="">Selecione</option>
-                <option value="assec">ASSEC</option>
-                <option value="atakarejo">Atakarejo</option>
-                <option value="barra_grande">Barra Grande</option>
-                <option value="batalhao">Batalhão</option>
-                <option value="populares">Populares</option>
-                <option value="praca_omara">Praça / Omara</option>
-                <option value="rodoviaria">Rodoviária</option>
-                <option value="outro">Outro</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field full">
-            <label for="instituicao">Instituição / local de estudo</label>
-            <input id="instituicao" name="instituicao" maxlength="120" placeholder="Ex.: UNEB, UNIVASF, faculdade...">
-          </div>
-
-          <div class="grid2">
-            <div class="field">
-              <label for="tem_prova">Tem prova hoje?</label>
-              <select id="tem_prova" name="tem_prova">
-                <option value="nao">Não</option>
-                <option value="sim">Sim</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="horario_prova">Horário da prova</label>
-              <select id="horario_prova" name="horario_prova" disabled>
-                <option value="">Não se aplica</option>
-                <option value="primeiro">1º horário</option>
-                <option value="segundo">2º horário</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field full">
-            <label for="observacao">Observação</label>
-            <textarea id="observacao" name="observacao" maxlength="300" rows="3" placeholder="Opcional"></textarea>
-          </div>
-
-          <button id="submitBtn" class="primary" type="submit">Registrar minha resposta</button>
-          <p class="legal">Ao enviar, sua resposta recebe data e hora oficiais e não poderá ser enviada novamente no mesmo dia.</p>
-        </form>
-        <iframe id="submitFrame" name="submitFrame" title="Envio" class="hidden-frame"></iframe>
-      </section>
-
-      <section id="myResponse" class="card success-card hidden" aria-live="polite">
-        <span class="eyebrow">REGISTRADO</span>
-        <h2>Sua resposta está salva</h2>
-        <div id="myResponseBody"></div>
-      </section>
-
-      <section class="card live-card">
-        <div class="card-head">
-          <div>
-            <span class="eyebrow">ATUALIZAÇÃO AUTOMÁTICA</span>
-            <h2>Situação de hoje</h2>
-          </div>
-          <span class="pulse-dot" title="Atualiza automaticamente"></span>
-        </div>
-        <div class="live-line"><span>Respostas após 15h</span><strong id="stLate">0</strong></div>
-        <div class="live-line"><span>Última atualização</span><strong id="lastUpdate">—</strong></div>
-      </section>
-    </main>
-
-    <footer>ASSEC • Formulário emergencial independente do servidor principal</footer>
-  </div>
-
-  <div id="toast" class="toast hidden" role="status"></div>
-  <script>
+  const VILIAN_BLOCK_MESSAGE = 'Você não se encontra no cadastro atual da ASSEC porque sua rematrícula não foi concluída ou renovada. Faça seu recadastro/rematrícula no escritório da ASSEC para regularizar seu acesso.';
 window.ASSEC_EMERGENCY = {
   // Após implantar o Apps Script, cole aqui a URL que termina em /exec.
   API_URL: 'https://script.google.com/macros/s/AKfycbwnoi6RIltfw67x_yHLabGzW0ua-83sWnCo6dHqrX1DyxETklX1m8iuLdDOHN-VLWYE/exec',
@@ -165,49 +283,164 @@ window.ASSEC_EMERGENCY = {
 };
 
   </script>
-  <script>
+<script>
 (() => {
   'use strict';
+
   const cfg = window.ASSEC_EMERGENCY || {};
   const API = String(cfg.API_URL || '').trim();
   const REFRESH = Math.max(10, Number(cfg.REFRESH_SECONDS || 15));
   const $ = (s) => document.querySelector(s);
+  const $$ = (s) => Array.from(document.querySelectorAll(s));
   const form = $('#form');
-  const phone = $('#telefone');
+  const nameInput = $('#nome');
+  const phoneInput = $('#telefone');
   const submitBtn = $('#submitBtn');
+  const memberState = $('#memberState');
+  const blockedAlert = $('#blockedAlert');
+  const socioRef = $('#socioRef');
+
   let submitted = false;
-  let currentServerDate = '';
+  let formOpen = true;
+  let duplicateFound = false;
+  let blockedNow = false;
+  let selectedMember = null;
+  let suggestionRequest = {nome:0, telefone:0};
+  let currentSelect = null;
 
   const configured = /^https:\/\/script\.google\.com\/.+\/exec(?:\?.*)?$/i.test(API);
-  const toast = (msg) => {
-    const el = $('#toast'); el.textContent = msg; el.classList.remove('hidden');
-    clearTimeout(window.__toastTimer); window.__toastTimer = setTimeout(() => el.classList.add('hidden'), 4200);
+
+  const toast = (msg, ms=4400) => {
+    const el = $('#toast');
+    el.textContent = msg;
+    el.classList.remove('hidden');
+    clearTimeout(window.__toastTimer);
+    window.__toastTimer = setTimeout(() => el.classList.add('hidden'), ms);
   };
-  const digits = (v) => String(v || '').replace(/\D+/g, '');
+
+  const digits = (v) => {
+    let d = String(v || '').replace(/\D+/g, '');
+    if (d.length > 11 && d.slice(0,2) === '55') d = d.slice(2);
+    return d.slice(-11);
+  };
+
+  const normalizeName = (v) => String(v || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'')
+    .toLowerCase()
+    .replace(/[^a-z0-9 ]+/g,' ')
+    .replace(/\s+/g,' ')
+    .trim();
+
+  const formatPhone = (value) => {
+    const d = digits(value);
+    if (!d) return '';
+    if (d.length <= 2) return '(' + d;
+    if (d.length <= 6) return '(' + d.slice(0,2) + ') ' + d.slice(2);
+    if (d.length <= 10) return '(' + d.slice(0,2) + ') ' + d.slice(2,6) + '-' + d.slice(6);
+    return '(' + d.slice(0,2) + ') ' + d.slice(2,7) + '-' + d.slice(7,11);
+  };
+
+  const escapeHtml = (v) => String(v ?? '').replace(/[&<>"']/g, c => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[c]));
+
   const labelTrip = (v) => ({ida:'Ida',volta:'Volta',ida_volta:'Ida e volta'}[v] || v || '—');
   const labelCity = (v) => ({juazeiro:'Juazeiro - BA',petrolina:'Petrolina - PE'}[v] || v || '—');
 
   function jsonp(params) {
     return new Promise((resolve, reject) => {
       if (!configured) return reject(new Error('API não configurada'));
+
       const cb = '__assec_cb_' + Date.now() + '_' + Math.random().toString(36).slice(2);
       const script = document.createElement('script');
       const url = new URL(API);
+
       Object.entries(params || {}).forEach(([k,v]) => url.searchParams.set(k, v));
       url.searchParams.set('callback', cb);
+
       let timer;
-      window[cb] = (data) => { clearTimeout(timer); cleanup(); resolve(data); };
-      const cleanup = () => { try{delete window[cb]}catch{}; script.remove(); };
-      script.onerror = () => { clearTimeout(timer); cleanup(); reject(new Error('Falha de conexão')); };
-      timer = setTimeout(() => { cleanup(); reject(new Error('Tempo esgotado')); }, 12000);
+      const cleanup = () => {
+        try { delete window[cb]; } catch {}
+        script.remove();
+      };
+
+      window[cb] = (data) => {
+        clearTimeout(timer);
+        cleanup();
+        resolve(data);
+      };
+
+      script.onerror = () => {
+        clearTimeout(timer);
+        cleanup();
+        reject(new Error('Falha de conexão'));
+      };
+
+      timer = setTimeout(() => {
+        cleanup();
+        reject(new Error('Tempo esgotado'));
+      }, 12000);
+
       script.src = url.toString();
       document.head.appendChild(script);
     });
   }
 
+  function setMemberState(type, text) {
+    memberState.className = 'member-state ' + type;
+    memberState.innerHTML = '<span class="member-dot"></span><span>' + escapeHtml(text) + '</span>';
+  }
+
+  function localBlocked() {
+    const first = (normalizeName(nameInput.value).split(' ')[0] || '');
+    return first === 'vilian' || digits(phoneInput.value) === '74988564763';
+  }
+
+  function refreshBlockedUI(forceBlocked = null) {
+    blockedNow = forceBlocked === null ? localBlocked() : !!forceBlocked;
+    blockedAlert.classList.toggle('hidden', !blockedNow);
+
+    if (blockedNow) {
+      setMemberState('blocked', VILIAN_BLOCK_MESSAGE);
+    } else if (selectedMember) {
+      setMemberState('ok', 'Cadastro ASSEC localizado e selecionado.');
+    } else if (nameInput.value.trim() || digits(phoneInput.value)) {
+      setMemberState('new', 'Se não aparecer na busca, você pode continuar. Após o primeiro envio, entrará na lista emergencial.');
+    } else {
+      setMemberState('neutral', 'Você pode pesquisar um cadastro existente ou informar um novo.');
+    }
+
+    updateSubmitState();
+  }
+
+  function updateSubmitState() {
+    if (!formOpen) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Formulário fechado';
+      return;
+    }
+    if (duplicateFound) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Resposta já registrada hoje';
+      return;
+    }
+    if (blockedNow) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Recadastro necessário';
+      return;
+    }
+    if (submitted) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Registrando…';
+      return;
+    }
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Registrar minha resposta';
+  }
+
   function applyStatus(d) {
     if (!d || !d.ok) return;
-    currentServerDate = d.data_operacional || '';
     $('#stTotal').textContent = d.total ?? 0;
     $('#stIda').textContent = d.ida ?? 0;
     $('#stVolta').textContent = d.volta ?? 0;
@@ -218,83 +451,484 @@ window.ASSEC_EMERGENCY = {
     $('#onlineBadge').textContent = d.form_aberto ? 'online • recebendo' : 'temporariamente fechado';
     $('#onlineBadge').style.opacity = d.form_aberto ? '1' : '.7';
     $('#lateBanner').classList.toggle('hidden', !d.limite_passou);
-    if (!d.form_aberto) { submitBtn.disabled = true; submitBtn.textContent = 'Formulário fechado'; }
-    else if (!submitted && !$('#myResponse').classList.contains('hidden')) { submitBtn.disabled = true; }
-    else if (!submitted) { submitBtn.disabled = false; submitBtn.textContent = 'Registrar minha resposta'; }
+    formOpen = !!d.form_aberto;
+    updateSubmitState();
   }
 
   async function refreshStatus() {
-    if (!configured) { $('#onlineBadge').textContent = 'falta configurar API'; return; }
-    try { applyStatus(await jsonp({action:'status'})); }
-    catch { $('#onlineBadge').textContent = 'sem conexão'; }
+    if (!configured) {
+      $('#onlineBadge').textContent = 'falta configurar API';
+      return;
+    }
+    try {
+      applyStatus(await jsonp({action:'status'}));
+    } catch {
+      $('#onlineBadge').textContent = 'sem conexão';
+    }
   }
 
   function showMine(d) {
     if (!d || !d.encontrada) return false;
+
     $('#myResponseBody').innerHTML = `
       <div class="response-grid">
-        <div><span>Viagem</span><b>${labelTrip(d.viagem)}</b></div>
-        <div><span>Posição</span><b>#${d.ordem || '—'}</b></div>
-        <div><span>Registrado às</span><b>${d.hora || '—'}</b></div>
-        <div><span>Cidade</span><b>${labelCity(d.cidade)}</b></div>
+        <div><span>Viagem</span><b>${escapeHtml(labelTrip(d.viagem))}</b></div>
+        <div><span>Posição</span><b>#${escapeHtml(d.ordem || '—')}</b></div>
+        <div><span>Registrado às</span><b>${escapeHtml(d.hora || '—')}</b></div>
+        <div><span>Cidade</span><b>${escapeHtml(labelCity(d.cidade))}</b></div>
         <div><span>Situação</span><b>${d.apos_15h ? 'Após 15h' : 'No prazo'}</b></div>
-        <div><span>Data</span><b>${d.data_br || d.data_operacional || '—'}</b></div>
+        <div><span>Data</span><b>${escapeHtml(d.data_br || d.data_operacional || '—')}</b></div>
       </div>`;
+
     $('#myResponse').classList.remove('hidden');
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Resposta já registrada hoje';
-    form.querySelectorAll('input,select,textarea').forEach(el => { if (el.type !== 'hidden') el.disabled = true; });
+    duplicateFound = true;
+    form.querySelectorAll('input,select,textarea').forEach(el => {
+      if (el.type !== 'hidden') el.disabled = true;
+    });
+    syncAllSmartSelects();
+    updateSubmitState();
     return true;
   }
 
   async function checkMine(rawPhone, announce=false) {
     const tel = digits(rawPhone);
     if (tel.length < 10 || !configured) return false;
+
     try {
       const d = await jsonp({action:'me', telefone:tel});
       if (showMine(d)) {
         localStorage.setItem('assec_emergency_phone', tel);
-        if (announce) toast(d.duplicada ? 'Você já tinha uma resposta registrada hoje.' : 'Resposta registrada com sucesso.');
+        if (announce) toast('Você já possui uma resposta registrada hoje.');
         return true;
       }
     } catch {}
     return false;
   }
 
+  /* ===== AUTOCOMPLETE DE SÓCIOS ===== */
+  function clearSelectedMember() {
+    selectedMember = null;
+    socioRef.value = '';
+    refreshBlockedUI();
+  }
+
+  function selectMember(member) {
+    if (!member) return;
+
+    if (member.bloqueado) {
+      selectedMember = member;
+      nameInput.value = member.nome || nameInput.value;
+      phoneInput.value = formatPhone(member.telefone || phoneInput.value);
+      socioRef.value = member.id || '';
+      closeSuggestions();
+      refreshBlockedUI(true);
+      toast(member.motivo || VILIAN_BLOCK_MESSAGE, 5200);
+      return;
+    }
+
+    selectedMember = member;
+    nameInput.value = member.nome || '';
+    phoneInput.value = formatPhone(member.telefone || '');
+    socioRef.value = member.id || '';
+    localStorage.setItem('assec_emergency_name', nameInput.value);
+    localStorage.setItem('assec_emergency_phone', digits(phoneInput.value));
+    closeSuggestions();
+    refreshBlockedUI(false);
+  }
+
+  function renderSuggestions(container, results, query) {
+    if (!results.length) {
+      container.innerHTML = `
+        <div class="suggestion-empty">
+          <strong>Nenhum cadastro encontrado.</strong><br>
+          Você pode continuar preenchendo normalmente. Após o envio confirmado, esse nome e telefone passarão a aparecer nas próximas pesquisas.
+        </div>`;
+      container.classList.remove('hidden');
+      return;
+    }
+
+    container.innerHTML = '';
+    results.forEach(member => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'suggestion-item' + (member.bloqueado ? ' blocked' : '');
+      btn.setAttribute('role','option');
+      btn.innerHTML = `
+        <span>
+          <strong>${escapeHtml(member.nome)}</strong>
+          <small>${escapeHtml(formatPhone(member.telefone))}</small>
+        </span>
+        <span class="tag">${member.bloqueado ? 'Bloqueado' : 'ASSEC'}</span>`;
+      btn.addEventListener('click', () => {
+        if (member.bloqueado) {
+          selectMember(member);
+          return;
+        }
+        selectMember(member);
+      });
+      container.appendChild(btn);
+    });
+    container.classList.remove('hidden');
+  }
+
+  const lookupTimers = {};
+  function scheduleMemberSearch(campo) {
+    const input = campo === 'telefone' ? phoneInput : nameInput;
+    const container = campo === 'telefone' ? $('#telefoneSuggestions') : $('#nomeSuggestions');
+    const raw = campo === 'telefone' ? digits(input.value) : input.value.trim();
+    const min = campo === 'telefone' ? 3 : 2;
+
+    clearTimeout(lookupTimers[campo]);
+
+    if (raw.length < min) {
+      container.classList.add('hidden');
+      container.innerHTML = '';
+      return;
+    }
+
+    lookupTimers[campo] = setTimeout(async () => {
+      const reqId = ++suggestionRequest[campo];
+      try {
+        const d = await jsonp({action:'socios', campo, q:raw});
+        if (reqId !== suggestionRequest[campo]) return;
+        renderSuggestions(container, Array.isArray(d.resultados) ? d.resultados : [], raw);
+      } catch {
+        if (reqId !== suggestionRequest[campo]) return;
+        container.innerHTML = '<div class="suggestion-empty">Não foi possível consultar a lista agora. Você ainda pode preencher manualmente.</div>';
+        container.classList.remove('hidden');
+      }
+    }, 220);
+  }
+
+  function closeSuggestions() {
+    $$('.suggestions').forEach(el => el.classList.add('hidden'));
+  }
+
+  nameInput.addEventListener('input', () => {
+    if (selectedMember && normalizeName(nameInput.value) !== normalizeName(selectedMember.nome)) clearSelectedMember();
+    scheduleMemberSearch('nome');
+    refreshBlockedUI();
+  });
+
+  phoneInput.addEventListener('input', () => {
+    const pos = phoneInput.selectionStart || phoneInput.value.length;
+    phoneInput.value = formatPhone(phoneInput.value);
+    try { phoneInput.setSelectionRange(phoneInput.value.length, phoneInput.value.length); } catch {}
+    if (selectedMember && digits(phoneInput.value) !== digits(selectedMember.telefone)) clearSelectedMember();
+    scheduleMemberSearch('telefone');
+    refreshBlockedUI();
+  });
+
+  phoneInput.addEventListener('blur', () => {
+    setTimeout(() => checkMine(phoneInput.value, false), 180);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.autocomplete-field')) closeSuggestions();
+  });
+
+  /* ===== SELECTS PESQUISÁVEIS ===== */
+  const smartSelects = new Map();
+  const modal = $('#smartSelectModal');
+  const search = $('#smartSelectSearch');
+  const optionsBox = $('#smartSelectOptions');
+  const modalTitle = $('#smartSelectTitle');
+
+  function selectLabel(select) {
+    const opt = select.options[select.selectedIndex];
+    return opt ? opt.textContent.trim() : 'Selecione';
+  }
+
+  function syncSmartSelect(select) {
+    const meta = smartSelects.get(select.id);
+    if (!meta) return;
+    meta.button.disabled = !!select.disabled;
+    const chosen = select.value;
+    const label = selectLabel(select);
+    meta.label.textContent = chosen ? label : (meta.placeholder || label || 'Selecione');
+    meta.label.classList.toggle('placeholder', !chosen);
+  }
+
+  function syncAllSmartSelects() {
+    smartSelects.forEach(meta => syncSmartSelect(meta.select));
+  }
+
+  function renderSelectOptions(filter='') {
+    if (!currentSelect) return;
+    const q = normalizeName(filter);
+    optionsBox.innerHTML = '';
+
+    const visible = Array.from(currentSelect.options).filter(opt => {
+      if (!opt.value) return !q;
+      return !q || normalizeName(opt.textContent).includes(q);
+    });
+
+    if (!visible.length) {
+      optionsBox.innerHTML = '<div class="select-no-result">Nenhuma opção encontrada.</div>';
+      return;
+    }
+
+    visible.forEach(opt => {
+      if (!opt.value) return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'select-option' + (currentSelect.value === opt.value ? ' active' : '');
+      btn.innerHTML = '<span>' + escapeHtml(opt.textContent.trim()) + '</span><span>' + (currentSelect.value === opt.value ? '✓' : '') + '</span>';
+      btn.addEventListener('click', () => {
+        currentSelect.value = opt.value;
+        currentSelect.dispatchEvent(new Event('change', {bubbles:true}));
+        syncSmartSelect(currentSelect);
+        closeSmartSelect();
+      });
+      optionsBox.appendChild(btn);
+    });
+  }
+
+  function openSmartSelect(select) {
+    if (!select || select.disabled) return;
+    currentSelect = select;
+    const labelEl = select.closest('.field')?.querySelector('label');
+    modalTitle.textContent = labelEl ? labelEl.textContent.trim() : 'Escolha uma opção';
+    search.value = '';
+    renderSelectOptions('');
+    modal.classList.remove('hidden');
+    modal.setAttribute('aria-hidden','false');
+    requestAnimationFrame(() => search.focus());
+  }
+
+  function closeSmartSelect() {
+    modal.classList.add('hidden');
+    modal.setAttribute('aria-hidden','true');
+    currentSelect = null;
+  }
+
+  $$('select[data-smart]').forEach(select => {
+    if (select.required) {
+      select.dataset.wasRequired = '1';
+      select.required = false;
+    }
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'smart-select-trigger';
+    button.innerHTML = '<span class="smart-label"></span><span class="chev">⌄</span>';
+    select.insertAdjacentElement('afterend', button);
+
+    const label = button.querySelector('.smart-label');
+    const first = select.options[0];
+    smartSelects.set(select.id, {
+      select,
+      button,
+      label,
+      placeholder:first ? first.textContent.trim() : 'Selecione'
+    });
+
+    button.addEventListener('click', () => openSmartSelect(select));
+    select.addEventListener('change', () => syncSmartSelect(select));
+    syncSmartSelect(select);
+  });
+
+  search.addEventListener('input', () => renderSelectOptions(search.value));
+  $('#smartSelectClose').addEventListener('click', closeSmartSelect);
+  modal.addEventListener('click', e => { if (e.target === modal) closeSmartSelect(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSmartSelect(); });
+
+  /* ===== INSTITUIÇÃO / PROVA ===== */
+  const instituicaoSelect = $('#instituicaoSelect');
+  const instituicaoFinal = $('#instituicao');
+  const outraInstituicaoWrap = $('#outraInstituicaoWrap');
+  const outraInstituicao = $('#outraInstituicao');
+
+  function sincronizarInstituicao() {
+    const outro = instituicaoSelect.value === 'OUTRO';
+    outraInstituicaoWrap.classList.toggle('hidden', !outro);
+    outraInstituicao.required = outro;
+    instituicaoFinal.value = outro
+      ? String(outraInstituicao.value || '').trim()
+      : instituicaoSelect.value;
+  }
+
+  instituicaoSelect.addEventListener('change', sincronizarInstituicao);
+  outraInstituicao.addEventListener('input', sincronizarInstituicao);
+  sincronizarInstituicao();
+
   $('#tem_prova').addEventListener('change', (e) => {
     const yes = e.target.value === 'sim';
     $('#horario_prova').disabled = !yes;
     if (!yes) $('#horario_prova').value = '';
+    syncSmartSelect($('#horario_prova'));
   });
 
-  phone.addEventListener('blur', () => checkMine(phone.value, false));
+  /* ===== VALIDAÇÃO ===== */
+  function validateRequiredSelects() {
+    const checks = [
+      ['cidade','Escolha a cidade.'],
+      ['embarque','Escolha o ponto de embarque.'],
+      ['instituicaoSelect','Escolha a instituição.'],
+      ['tem_prova','Informe se tem prova hoje.']
+    ];
+
+    for (const [id,msg] of checks) {
+      const el = $('#'+id);
+      if (!el.value) {
+        toast(msg);
+        const meta = smartSelects.get(id);
+        if (meta) meta.button.focus();
+        return false;
+      }
+    }
+
+    if ($('#tem_prova').value === 'sim' && !$('#horario_prova').value) {
+      toast('Escolha o horário da prova.');
+      smartSelects.get('horario_prova')?.button.focus();
+      return false;
+    }
+    return true;
+  }
+
+  async function validateBlockedRemote() {
+    if (!configured) return false;
+    try {
+      const d = await jsonp({
+        action:'validar',
+        nome:nameInput.value,
+        telefone:digits(phoneInput.value)
+      });
+      if (d && d.bloqueado) {
+        refreshBlockedUI(true);
+        toast(d.mensagem || VILIAN_BLOCK_MESSAGE, 5400);
+        return true;
+      }
+    } catch {}
+    return false;
+  }
+
+  /* ===== RETORNO DO IFRAME ===== */
+  window.addEventListener('message', (event) => {
+    const host = String(event.origin || '');
+    const trustedGoogle = host.includes('script.google.com') || host.includes('googleusercontent.com');
+    if (!trustedGoogle) return;
+    const data = event.data;
+    if (!data || data.source !== 'ASSEC_EMERGENCY_RESULT') return;
+
+    const result = data.result || {};
+    submitted = false;
+
+    if (result.bloqueado) {
+      refreshBlockedUI(true);
+      toast(result.mensagem || VILIAN_BLOCK_MESSAGE, 5600);
+      return;
+    }
+
+    if (result.duplicada) {
+      duplicateFound = true;
+      updateSubmitState();
+      toast(result.mensagem || 'Você já respondeu hoje.');
+      checkMine(phoneInput.value, false);
+      return;
+    }
+
+    if (!result.ok) {
+      updateSubmitState();
+      toast(result.mensagem || 'Não foi possível registrar.');
+      return;
+    }
+
+    toast('Resposta registrada com sucesso.');
+    setTimeout(() => checkMine(phoneInput.value, false), 450);
+    refreshStatus();
+  });
 
   form.addEventListener('submit', async (e) => {
-    if (!configured) { e.preventDefault(); toast('Ainda falta publicar o backend do Google Apps Script.'); return; }
-    const tel = digits(phone.value);
-    if (tel.length < 10) { e.preventDefault(); toast('Informe um telefone válido com DDD.'); phone.focus(); return; }
-    if (await checkMine(tel, true)) { e.preventDefault(); return; }
+    sincronizarInstituicao();
+
+    if (instituicaoSelect.value === 'OUTRO' && !instituicaoFinal.value) {
+      e.preventDefault();
+      toast('Informe o nome da instituição.');
+      outraInstituicao.focus();
+      return;
+    }
+
+    if (!configured) {
+      e.preventDefault();
+      toast('O backend do Google Apps Script ainda não está configurado.');
+      return;
+    }
+
+    const tel = digits(phoneInput.value);
+    if (tel.length < 10) {
+      e.preventDefault();
+      toast('Informe um telefone válido com DDD.');
+      phoneInput.focus();
+      return;
+    }
+
+    if (!nameInput.value.trim()) {
+      e.preventDefault();
+      toast('Informe seu nome.');
+      nameInput.focus();
+      return;
+    }
+
+    if (!validateRequiredSelects()) {
+      e.preventDefault();
+      return;
+    }
+
+    if (localBlocked()) {
+      e.preventDefault();
+      refreshBlockedUI(true);
+      toast(VILIAN_BLOCK_MESSAGE, 5400);
+      return;
+    }
+
+    if (await validateBlockedRemote()) {
+      e.preventDefault();
+      return;
+    }
+
+    if (await checkMine(tel, true)) {
+      e.preventDefault();
+      return;
+    }
+
     submitted = true;
     form.action = API;
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Registrando…';
+    updateSubmitState();
+
     localStorage.setItem('assec_emergency_phone', tel);
+    localStorage.setItem('assec_emergency_name', nameInput.value.trim());
+
+    // Fallback caso o navegador não entregue postMessage do iframe.
     setTimeout(async () => {
-      const ok = await checkMine(tel, true);
+      if (!submitted) return;
+      const ok = await checkMine(tel, false);
       submitted = false;
-      if (!ok) { submitBtn.disabled = false; submitBtn.textContent = 'Registrar minha resposta'; toast('Ainda não consegui confirmar. Verifique a conexão e tente novamente.'); }
+      if (!ok) {
+        updateSubmitState();
+        toast('Ainda não consegui confirmar o envio. Verifique a conexão e tente novamente.');
+      }
       refreshStatus();
-    }, 1500);
+    }, 4500);
   });
 
-  const saved = localStorage.getItem('assec_emergency_phone');
-  if (saved) phone.value = saved;
-  refreshStatus().then(() => { if (saved) checkMine(saved, false); });
-  setInterval(() => { if (!document.hidden) refreshStatus(); }, REFRESH * 1000);
+  /* ===== RESTAURAÇÃO ===== */
+  const savedPhone = localStorage.getItem('assec_emergency_phone');
+  const savedName = localStorage.getItem('assec_emergency_name');
+  if (savedPhone) phoneInput.value = formatPhone(savedPhone);
+  if (savedName) nameInput.value = savedName;
+
+  refreshBlockedUI();
+  refreshStatus().then(() => {
+    if (savedPhone) checkMine(savedPhone, false);
+  });
+
+  setInterval(() => {
+    if (!document.hidden) refreshStatus();
+  }, REFRESH * 1000);
 
   // Versão de contingência em arquivo único: sem Service Worker.
 })();
-
-  </script>
+</script>
 </body>
 </html>
