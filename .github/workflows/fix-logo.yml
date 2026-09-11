@@ -40,8 +40,16 @@ jobs:
           if '.brandmark img{' not in s:
               s = s.replace('.hero h1{', logo_css + '.hero h1{', 1)
 
-          replacement = '<div class="brandmark" aria-label="Logo ASSEC"><img src="./logo-assec.png?v=2" alt="ASSEC"/><span class="logo-fallback" aria-hidden="true">AS</span></div>'
-          s, n = re.subn(r'<div class="brandmark"[^>]*>.*?</div>', replacement, s, count=1, flags=re.S)
+          replacement = '<div class="brandmark" aria-label="Logo ASSEC"><img src="./logo-assec.png?v=3" alt="ASSEC" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'grid\'"/><span class="logo-fallback" aria-hidden="true">AS</span></div>'
+          patterns = [
+              r'<div\s+aria-hidden="true"\s+class="brandmark">.*?</div>',
+              r'<div\s+class="brandmark"[^>]*>.*?</div>'
+          ]
+          n = 0
+          for pattern in patterns:
+              s, n = re.subn(pattern, replacement, s, count=1, flags=re.S)
+              if n:
+                  break
           if n == 0:
               raise SystemExit('Bloco brandmark não encontrado')
 
